@@ -28,7 +28,10 @@
 | # | Topic | Status |
 |---|---|---|
 | 001 | Counting & Probability Foundations | ✅ |
-| 002 | Conditional Probability & Bayes | ❌ |
-| 003 | Random Variables & Distributions | ❌ |
-| 004 | Sampling & CLT | ❌ |
-| 005 | Hypothesis Testing | ❌ |
+| 002 | Conditional Probability & Bayes | [📄] |
+| 003 | Random Variables & Distributions | [📄] |
+| 004 | Poisson Distribution | [📄] |
+| 005 | Exponential Distribution | [📄] |
+| 006 | Normal Distribution | 🔜 |
+| 007 | Descriptive Stats & Estimation | [ ] |
+| 008 | Hypothesis Testing | [ ] |

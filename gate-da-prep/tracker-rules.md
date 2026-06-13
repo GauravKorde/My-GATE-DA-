@@ -126,6 +126,23 @@ If you fall ≥ 5 days behind on study buffer (study buffer ≤ -5), I will:
 
 ---
 
+## Rule 10: Session-Memory Updates
+
+`session-memory.md` is **teacher's notes about the student** — preferences, rules, observations. Not a log.
+
+| Rule | Detail |
+|------|--------|
+| **Update trigger** | Only when something significant changes (new rule, preference shift, key observation) |
+| **Do NOT update** | After every response, after creating sessions, after status changes — that's progress-tracker's job |
+| **Sections** | User Profile → Rules & Preferences → Key Observations → Key Decisions |
+| **Preference #10** | "Session-memory updates: only when something significant changes" — this is the user's explicit rule |
+
+## Rule 11: No Auto-Commit
+
+Never commit or push to GitHub unless the user explicitly asks. Changes stay local until user says "push" or "commit".
+
+---
+
 ## Quick Reference: Session Header Template
 
 ```markdown

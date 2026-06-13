@@ -296,7 +296,7 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 
 ---
 
-## 7. Common Pitfalls to Avoid
+## 8. Common Pitfalls to Avoid
 
 | ❌ Mistake | ✅ Fix |
 |-----------|-------|
@@ -316,7 +316,7 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 
 ---
 
-## 7. Session Structure Template
+## 9. Session Structure Template
 
 ```
 # Session NNN — [Topic]: The Documentary
@@ -371,7 +371,7 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 
 ---
 
-## 8. Summary — The Golden Rule
+## 10. Summary — The Golden Rule
 
 **If a step feels like "too much detail," include it.**
 **If a formula feels "obvious," derive it anyway.**
