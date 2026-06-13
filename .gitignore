@@ -1,0 +1,19 @@
+# OS
+Thumbs.db
+.DS_Store
+*.swp
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Obsidian workspace cache (not notes)
+.obsidian/workspace.json
+.obsidian/workspace
+
+# Temp
+temp/
+
+# Obsidian workspace cache (changes every open)
+gate-da-prep/.obsidian/
