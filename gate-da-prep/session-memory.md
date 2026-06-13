@@ -3,6 +3,9 @@
 > **Purpose:** Any AI (opencode, Antigravity 2.0, or future agents) reads this file to continue the conversation seamlessly. Updated after every significant action.
 >
 > **File is maintained by the AI.** Outdated info gets compressed or removed to save context.
+>
+> **Last updated by:** opencode — Jun 13, 2026
+> **Agent identity:** Every update must note which agent made the change (opencode, Antigravity 2.0, etc.)
 
 ---
 
@@ -151,6 +154,7 @@ gate-da-prep/
 ## AI Maintenance Notes
 
 - Update this file **immediately after** each session creation, user "done" confirmation, or significant decision
+- Every update must include the **agent identity** that made the change — add a line like `> Updated by: opencode` or `> Updated by: Antigravity 2.0` at the top of the file under the purpose block
 - When RECENT HISTORY exceeds ~15 entries, **compress oldest 5 into ARCHIVE**
 - When a phase completes, **move all its session entries into ARCHIVE** with a single summary line
 - When a user preference is confirmed over 3+ interactions, **promote it to section 3** and remove from recent history
