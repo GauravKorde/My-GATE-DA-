@@ -84,6 +84,7 @@ Every session must check ALL of these:
 - [ ] **Practice problems** with full theoretical explanations in callouts (even if few)
 
 ### Tone Markers
+
 - Use phrases like: "Here's the key insight:", "The magic happens when:", "Let me show you why:"
 - Address the reader directly: "You might wonder why..."
 - Use conversational but precise language
@@ -127,12 +128,14 @@ e^{-2} ≈ 0.1353 ← converging
 ```
 
 ### Integration Steps Must Show
+
 - Set up u and dv clearly for integration by parts
 - Show boundary term evaluation
 - Show remaining integral computation
 - Verify final result
 
 ### Series Manipulations Must Show
+
 - Show index shifts (k → k-1 → j)
 - Show factorial cancellations
 - Show why the remaining sum equals a known series
@@ -144,87 +147,176 @@ e^{-2} ≈ 0.1353 ← converging
 Before writing ANY session, follow this process:
 
 ### Step A: Read the last session
+
 - Understand the current narrative state
 - Identify what topics come next naturally
 - Note what bridges need to connect
 
 ### Step B: Write a Blueprint (plan mode)
+
 1. List every chapter with its narrative hook
 2. Within each chapter, list every Part with its derivation
 3. Note which derivations need "two methods" treatment
 4. Plan real-world examples for each chapter
 5. Plan numerical verification points
 6. Plan bridge sentences between chapters
+7. **Identify which concepts need matplotlib charts** (flag for generation)
 
 ### Step C: Present blueprint for review
-- User reviews and approves
+
+- User reviews and approves (or says "go ahead" for standard topics)
 
 ### Step D: Expand to full session (build mode)
+
 - Expand each bullet into full documentary narrative
 - Follow the Chapter Template from Section 2
 - Run the Stylistic Checklist from Section 3
 - Every algebraic step must be written out
+- **Generate matplotlib charts** for every flagged concept BEFORE writing the chapter
+- Embed charts via `![[chart-name.png]]` in Obsidian
 
 ---
 
-## 6. Visuals & Language Rules
+## 6. Mandatory Quality Checkpoints
 
-### Rule 1: Use Visuals Whenever Possible
+**Before declaring a session complete, run through ALL:**
 
-Abstract concepts must be accompanied by a visual. Preferred visual types (in order):
+| Checkpoint | Action |
+|---|---|
+| **Algebra audit** | Every line of algebra verified; no "simplifies to" jumps |
+| **Formula audit** | Every boxed formula has a "Let's Understand This Formula" section |
+| **Numerical verification** | Every formula tested with concrete numbers; ✅ markers present |
+| **Chart audit** | Every abstract concept has a matplotlib PNG (not just ASCII) |
+| **Link audit** | Every chapter has a bridge sentence to next chapter |
+| **Practice problems** | 3-5 problems: E1, E2, M1, M2, M3 with full solutions |
+| **Header correct** | Session header has expected dates, buffer, status |
+| **Cross-refs** | References to previous sessions use `⚡ Session XXX` format |
+| **Assets committed** | All PNGs saved to `assets/` and embedded correctly |
 
-**ASCII/Unicode bar charts** (always works, no dependencies):
-````
-λ = 1:   0: ████████████████████ (37%)
-          1: ████████████████████ (37%)
-          2: ████████            (18%)
-          3: ███                 (6%)
-          4: ▏                   (1.5%)
-          rest: tiny
+---
 
-→ Looks like a slide: huge left bar, long skinny tail to the right
-````
+## 7. Visual Generation Standards
 
-**Mermaid diagrams** for relationships, flow, connections:
-```mermaid
-graph LR
-    A[Binomial<br/>n→∞, p→0] --> B[Poisson<br/>λ = np]
-    B --> C[Exponential<br/>Waiting time]
+**Mandatory matplotlib charts for:**
+
+- Distribution shape evolution (e.g., Binomial → Normal)
+- PDF/CDF comparisons across parameters
+- Area-under-curve visualizations (68-95-99.7, tail probabilities)
+- Symmetry/transform demonstrations
+- Convergence sequences (n=10, 100, 1000, ∞)
+
+**Chart style:**
+
+- Clean, minimal, publication-ready
+- Colorblind-safe palette (viridis/cividis or explicit hex)
+- Axes labeled with units
+- Key points annotated (mean, σ, inflection points)
+- Saved as PNG to `assets/` at 150 DPI
+- Filename pattern: `concept-name.png` (kebab-case)
+
+**Chart style — No ASCII art for statistical graphics** — use matplotlib. ASCII only for quick inline structure.
+
+---
+
+## 8. Problem Difficulty Bands
+
+**Easy (E1, E2):** Direct application of one formula; one-step Z-score or 68-95-99.7 rule
+
+**Medium (M1, M2):** Multi-step; continuity correction, linear transform, sum of Normals, Binomial/Poisson approximation
+
+**Tough (M3):** Multi-concept; conditional probability within approximation, comparing exact vs approx, edge cases (non-linear transforms)
+
+**Each problem must include:**
+
+- Full step-by-step solution
+- "Check intuition" or "Verify" step
+- ✅ marker at end
+
+---
+
+## 9. Session Header Standard
+
+**Every session file MUST start with:**
+
+```
+# Session NNN — [Topic]: The Documentary
+
+> **📅 Expected:** Mon DD – Mon DD | **Buffer:** +X days 🟢 | **Status:** 📄 Doc ready
+>
+> A first-principles journey through [covered topics].
+> Read like a story — each chapter builds on the last.
+
+---
 ```
 
-**Tables with visual comparison columns**:
-| λ | Mean | Spread (σ) | Spread/Mean | Shape |
-|---|------|------------|-------------|-------|
-| 1 | 1 | 1 | 100% | Very lopsided ← |
-| 4 | 4 | 2 | 50% | Somewhat lopsided |
-| 16 | 16 | 4 | 25% | Starting to look symmetric |
-| 100 | 100 | 10 | 10% | Almost bell-shaped |
+Buffer = days docs written ahead of schedule. Status: 📄 Doc ready / ✅ Completed / [~] In progress.
 
-**Mermaid xyChart** (when available) for distribution comparisons.
+---
 
-### Rule 2: Use Simple Language — No Bookish/Academic Tone
+## 10. Content Buffer Rules
 
-**Talk like you're explaining the plot of a movie to a friend.**
-Not like you're writing a research paper.
+- **Content buffer** = furthest scheduled session date with 📄 doc - today
+- Target: maintain **≥ 7 days** buffer at all times
+- If buffer < 7 days → priority is writing next session(s)
+- **Study buffer** tracked separately in progress-tracker (user's actual pace)
 
-#### ❌ Academic / Bookish (DON'T)
+---
+
+## 11. Error & Correction Protocol
+
+When you catch a mistake (or user points one out):
+
+1. **Acknowledge immediately** — "You're right, that was wrong."
+2. **Explain the error** — what was wrong and why
+3. **Show the corrected version** — with full derivation
+4. **Mark the fix** — add a note: `// FIXED: ...` in the session file
+5. **Update session-memory.md** with the correction
+6. **Don't be defensive** — treat it as a debugging session
+
+---
+
+## 12. Cross-Session Linking
+
+- Reference previous sessions: `⚡ Session 003` or `🔜 Session 007`
+- Use consistent terminology across sessions
+- When a concept is first defined, note: `(defined in ⚡ Session XXX)`
+- When a concept is extended, note: `(extends ⚡ Session XXX)`
+
+---
+
+## 13. Scope & Length Guidelines
+
+| Session type | Target chapters | Target lines | Problems |
+|---|---|---|---|
+| Distribution deep-dive (Normal, Exponential) | 8-10 | 800-1200 | 5 |
+| Transformation/approximation | 6-8 | 600-900 | 5 |
+| Tool session (CLT, Hypothesis) | 6-8 | 600-900 | 4 |
+| Review/PYQ | 4-5 | 400-600 | 3 |
+
+**Rule:** One distribution per session file. Don't cram multiple distributions.
+
+---
+
+## 14. Stylistic Rules
+
+### Tone
+
+**Talk like you're explaining the plot of a movie to a friend.** Not like you're writing a research paper.
+
+**❌ Academic / Bookish (DON'T):**
+
 > "If events arrive at a Poisson rate λ, then the waiting time between events follows an Exponential distribution with parameter λ."
-
 > "This ensures the total area under the curve equals 1. The σ in the denominator accounts for the spread."
 
-> "The coefficient of variation equals 1, indicating the spread is as large as the mean."
+**✅ Conversational / Narrative (DO):**
 
-#### ✅ Conversational / Narrative (DO)
 > "So here's the situation. Buses arrive at some rate. You're standing at the stop. How long will you wait? That's what Exponential tells you. And here's the neat part: if λ is the rate, your waiting time is Exponential(λ). Simple as that."
-
 > "Think about it this way. If the bell is wider, it needs to be shorter, so the total area still equals 1. That's all the σ in the denominator does — it adjusts the height to match the width."
 
-> "The standard deviation is the same as the mean. That's huge. It means: if the average wait is 5 minutes, then waiting 10 minutes is totally normal. You can't say that about most distributions."
-
-#### Simple Language Toolkit
+### Simple Language Toolkit
 
 | Instead of this | Say this |
-|----------------|----------|
+|---|---|
 | "We define X as..." | "Here's what X means..." |
 | "It can be shown that..." | "Here's why this works..." |
 | "This is called the..." | "We call this the... — here's why the name fits" |
@@ -235,16 +327,17 @@ Not like you're writing a research paper.
 | "X follows a distribution..." | "X is a [Normal/Poisson/Exponential] — here's what that means: ..." |
 | Passive voice everywhere | Active voice. "You transform X." Not "X is transformed." |
 
-#### The Test
+### The Test
 
 Before writing any section, ask yourself: **"Would I explain it this way to a friend over chai?"**
 
 If the answer is no, rewrite it.
 
 A friend explaining doesn't say "the Poisson distribution converges to Normality as λ increases." They say:
+
 > "Look at what happens when λ gets bigger. When λ is small, the bars are all bunched up on the left. When λ is big, the bars spread out and look like a bell. It just naturally smooths out."
 
-#### Specific patterns to maintain
+### Specific Patterns
 
 1. **Set up a scene.** Don't state a fact. Paint a picture.
    - ❌ "The Exponential distribution models waiting time."
@@ -253,42 +346,63 @@ A friend explaining doesn't say "the Poisson distribution converges to Normality
 2. **One idea per sentence.** Short sentences. Periods, not commas.
 
 3. **Use "you" and "we".** Make the reader part of the story.
-   - "You want to find P(X > 130). Here's how." 
+   - "You want to find P(X > 130). Here's how."
    - "We start from the Binomial PMF."
 
 4. **Show the thinking process.** Don't just state results.
    - ❌ "The integral equals 1/λ."
    - ✅ "Now we need to evaluate this integral. Let's use integration by parts. Set u = t, dv = λe^{-λt}dt..."
-   
+
 5. **Bridge with "so" and "here's the thing".** Make the logic flow natural.
    - "So we've got P(T > t) = e^{-λt}. That's the survival probability. But what we usually want is P(T ≤ t) — the probability that the event has already happened. Here's how we get that..."
 
 6. **End sections with a punchy takeaway.** Don't trail off.
    - ✅ "And that's it. Mean = λ. Variance = λ. For Poisson, they're the same number. That's unique."
 
+---
+
+## 15. Visuals & "Show Me, Don't Tell Me"
+
+### Rule 1: Use Visuals Whenever Possible
+
+Abstract concepts must be accompanied by a visual. Preferred visual types (in order):
+
+**matplotlib charts** (mandatory for statistical graphics):
+- Distribution shape evolution (Binomial → Normal)
+- PDF/CDF comparisons across parameters
+- Area-under-curve visualizations (68-95-99.7, tail probabilities)
+- Symmetry/transform demonstrations
+- Convergence sequences (n=10, 100, 1000, ∞)
+
+**Mermaid diagrams** for relationships, flow, connections:
+
+```mermaid
+graph LR
+    A[Binomial<br/>n→∞, p→0] --> B[Poisson<br/>λ = np]
+    B --> C[Exponential<br/>Waiting time]
+```
+
+**Tables with visual comparison columns:**
+
+| λ | Mean | Spread (σ) | Spread/Mean | Shape |
+|---|------|------------|-------------|-------|
+| 1 | 1 | 1 | 100% | Very lopsided ← |
+| 4 | 4 | 2 | 50% | Somewhat lopsided |
+| 16 | 16 | 4 | 25% | Starting to look symmetric |
+| 100 | 100 | 10 | 10% | Almost bell-shaped |
+
+**No ASCII art for statistical graphics** — use matplotlib. ASCII only for quick inline structure.
+
+### Rule 2: Use Simple Language — No Bookish/Academic Tone
+
+Talk like you're explaining the plot of a movie to a friend. Not like you're writing a research paper.
+
 ### Rule 3: "Show Me, Don't Tell Me" for Abstract Concepts
 
 When explaining a relationship between two quantities:
 1. First, say it in plain words
 2. Then show a table with numbers
-3. Then add a visual (ASCII chart or diagram)
-
-Example structure for "Poisson becomes Normal as λ grows":
-```
-[Plain words]: Here's what happens...
-
-[Table]: λ=1 → spread = 100% of mean
-         λ=4 → spread = 50% of mean
-         λ=100 → spread = 10% of mean
-
-[ASCII visual]:
-λ=1:  |█|█|▌|▏|...  (lopsided)
-λ=4:  |▏|▌|██|█|▌|▏|...  (balanced-ish)
-λ=100:        like a bell curve
-
-[Takeaway]: So when someone tells you "Poisson approximates Normal for large λ," 
-this is what they mean — the shape just smooths out naturally.
-```
+3. Then add a visual (matplotlib chart or Mermaid diagram)
 
 ### Rule 4: Tables Over Text for Comparisons
 
@@ -296,10 +410,10 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 
 ---
 
-## 8. Common Pitfalls to Avoid
+## 16. Common Pitfalls to Avoid
 
 | ❌ Mistake | ✅ Fix |
-|-----------|-------|
+|---|---|
 | Stating formula without derivation | Derive from first principles, show every step |
 | "It can be shown that..." | Show it yourself |
 | Skipping algebra ("simplifying gives") | Write every intermediate line |
@@ -307,7 +421,7 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 | No "why" explanation | Add a "Let's understand this formula" section |
 | Dry tone | Add self-dialogue, analogies, narrative |
 | Bookish/academic language | Use short sentences, "you", physical analogies |
-| Abstract without visual | Add table, ASCII chart, or Mermaid diagram |
+| Abstract without visual | Add table, matplotlib chart, or Mermaid diagram |
 | Compressing multiple ideas into one paragraph | Break into subsections with clear headings |
 | Forgetting connections to previous topics | Add bridge sentences explicitly |
 | Only one method for derivation | Show at least two approaches when possible |
@@ -316,11 +430,13 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 
 ---
 
-## 9. Session Structure Template
+## 17. Session Structure Template
 
 ```
 # Session NNN — [Topic]: The Documentary
 
+> **📅 Expected:** Mon DD – Mon DD | **Buffer:** +X days 🟢 | **Status:** 📄 Doc ready
+>
 > A first-principles journey through [covered topics].
 > Read like a story — each chapter builds on the last.
 
@@ -357,6 +473,7 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 ## Summary of Formulas
 
 | Distribution | PMF/PDF | Mean | Variance |
+|---|---|---|---|
 
 ---
 
@@ -371,12 +488,15 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 
 ---
 
-## 10. Summary — The Golden Rule
+## 18. Summary — The Enhanced Golden Rule
 
 **If a step feels like "too much detail," include it.**
 **If a formula feels "obvious," derive it anyway.**
 **If an algebraic step is "trivial," show it anyway.**
+**If a concept lacks a chart, generate it.**
+**If a formula lacks "Let's Understand," write it.**
+**If a derivation lacks verification, add it.**
 
-The documentary style leaves nothing to the imagination. Every number, every operation, every transformation is explained. The reader never has to "fill in the gap."
+The documentary style leaves nothing to the imagination. Every number, every operation, every transformation, every visual is explained. The reader never has to "fill in the gap."
 
 This is what made Session 003 a gold mine. This is what every session must be.

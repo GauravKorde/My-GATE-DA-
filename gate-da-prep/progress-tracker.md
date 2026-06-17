@@ -99,8 +99,8 @@
 - ⚡ Sessions 003, 004
 
 **5. Continuous Distributions (4 days) — Jun 25–28** `[📄]`
-- PDF, CDF; Normal, Exponential, Uniform, t, Chi-sq, F
-- ⚡ Session 005 (Exp done). 🔜 Sessions 006–008 needed
+- PDF, CDF; Normal, Exponential, t, Chi-sq, F
+- ⚡ Session 005 (Exp done). ⚡ Session 006 (Normal — doc ready). 🔜 Sessions 007–008 needed
 
 **6. Descriptive Stats & Correlation (3 days) — Jun 29 – Jul 1** `[ ]`
 - Mean, Median, Mode, Std Dev, IQR, Covariance, Pearson/Spearman
@@ -266,9 +266,9 @@
 
 ## ✅ Current Standing
 
-> **Last updated:** Jun 13, 2026
-> **Phase:** 1 — Probability & Statistics (Day 1 of 30)
-> **Content buffer:** +13 days 🟢
+> **Last updated:** Jun 16, 2026
+> **Phase:** 1 — Probability & Statistics (Day 4 of 30)
+> **Content buffer:** +12 days 🟢
 > **Study buffer:** 0 days (on pace)
 
 | Metric | Value |
@@ -277,6 +277,6 @@
 | Days remaining | ~241 |
 | Topics due & done | 1 of 8 (Counting) |
 | Docs written & ready | 5 of 8 (thru Continuous) |
-| Next doc to write | Session 006 — Normal (due Jun 26) |
+| Next doc to write | Session 007 — Descriptive Stats & Estimation (due Jun 29) |
 | Next week to log | Week 1 (Jun 13–19) |
 | Weak topics flagged | 0 |

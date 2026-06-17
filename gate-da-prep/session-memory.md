@@ -13,7 +13,7 @@
 | Study hours | 6+ hrs/day |
 | Target | IISc Bangalore 835+ (primary), IIT Hyderabad 640+ (fallback) |
 | Exam | GATE DA 2027 (~Feb 2027) |
-| Vault | `C:\Users\HP\Desktop\gate - Copy\gate-da-prep\` |
+| Vault | `C:\Users\HP\Desktop\gate\gate-da-prep\` |
 
 ## Rules & Preferences
 
@@ -32,6 +32,8 @@
 | 11 | One distribution per session file |
 | 12 | Read a file before editing it |
 | 13 | When AI makes a mistake: acknowledge, fix logically, show corrected reasoning |
+| 14 | Optimize token usage — perform targeted file edits to specific line ranges instead of rewriting entire files |
+| 15 | Context efficiency — keep code and document updates modular to prevent context bloat and preserve free tier quota |
 
 ## Key Observations
 

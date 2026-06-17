@@ -1,0 +1,183 @@
+{
+  "main": {
+    "id": "a68b235a60ec42d8",
+    "type": "split",
+    "children": [
+      {
+        "id": "38bb74a2a245c0cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b936bee6d70f7621",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "gate-da-prep/01-probability-and-stats/session-006.md",
+                "mode": "preview",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "session-006"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4173edeb4456f243",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "e8c8e3bcb6e50f88",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical",
+            "autoReveal": false
+          },
+          "icon": "lucide-folder-closed",
+          "title": "Files"
+        }
+      },
+      {
+        "id": "b920b219c2840fdf",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          },
+          "icon": "lucide-search",
+          "title": "Search"
+        }
+      },
+      {
+        "id": "fdbff11cd59c953c",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-tags",
+          "title": "Tags"
+        }
+      },
+      {
+        "id": "99e35dcec03b5218",
+        "type": "leaf",
+        "state": {
+          "type": "all-properties",
+          "state": {
+            "sortOrder": "frequency",
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-archive",
+          "title": "All properties"
+        }
+      },
+      {
+        "id": "9d341aab28e4fd28",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "fc1e98b83a217473",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "9200f5ed8117c2c5",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "gate-da-prep/01-probability-and-stats/session-006.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-coming-in",
+          "title": "Backlinks"
+        }
+      },
+      {
+        "id": "981d7f77cc6f594d",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "gate-da-prep/01-probability-and-stats/session-003.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          },
+          "icon": "links-going-out",
+          "title": "Outgoing links"
+        }
+      },
+      {
+        "id": "fb85d7ee98a39dcc",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "gate-da-prep/01-probability-and-stats/session-003.md",
+            "followCursor": false,
+            "showSearch": false,
+            "searchQuery": ""
+          },
+          "icon": "lucide-list",
+          "title": "Outline"
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "b936bee6d70f7621",
+  "lastOpenFiles": [
+    "gate-da-prep/session-memory.md",
+    "gate-da-prep/progress-tracker.md",
+    "gate-da-prep/syllabus.md",
+    "gate-da-prep/01-probability-and-stats/session-003.md",
+    "gate-da-prep/01-probability-and-stats/session-002.md",
+    "gate-da-prep/temp/limit-proof.md",
+    "gate-da-prep/formulas/session-004-005.md",
+    "Untitled.md",
+    "gate-da-prep/formulas"
+  ]
+}

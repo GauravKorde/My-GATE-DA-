@@ -32,6 +32,6 @@
 | 003 | Random Variables & Distributions | [📄] |
 | 004 | Poisson Distribution | [📄] |
 | 005 | Exponential Distribution | [📄] |
-| 006 | Normal Distribution | 🔜 |
+| 006 | Normal Distribution | [📄] |
 | 007 | Descriptive Stats & Estimation | [ ] |
 | 008 | Hypothesis Testing | [ ] |

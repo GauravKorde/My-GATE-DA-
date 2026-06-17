@@ -616,25 +616,45 @@ This makes intuitive sense: waiting for $n$ events takes $n$ times as long on av
 
 ### Minimum of Exponentials
 
-Here's another useful property. Suppose you have two independent Exponential random variables:
-- $X \sim \text{Exponential}(\lambda_1)$ — time until bus A arrives
-- $Y \sim \text{Exponential}(\lambda_2)$ — time until bus B arrives
+Here's a fun one. Say you're waiting at a bus stop where **two** bus routes pass by:
+- Bus A comes at rate λ₁ — maybe every 10 min on average (λ₁ = 6 per hour)
+- Bus B comes at rate λ₂ — maybe every 15 min on average (λ₂ = 4 per hour)
 
-You'll take whichever bus comes first. The time until the first bus is $Z = \min(X, Y)$.
+You don't care which bus you take. You just want *any* bus. So the time until you board is the **minimum** of the two waiting times. Whichever shows up first wins.
 
-What's the distribution of $Z$?
+Let's figure out what that waiting time looks like.
 
-$$P(Z > t) = P(X > t \cap Y > t) = P(X > t) \cdot P(Y > t)$$
+**Step 1:** For you to still be waiting at time t, **both** buses must not have shown up yet:
 
-The last step uses independence. Now substitute the Exponential survival function:
+```
+P(you're still waiting at t) = P(Bus A not here AND Bus B not here)
+                              = P(X > t) × P(Y > t)
+```
 
-$$= e^{-\lambda_1 t} \cdot e^{-\lambda_2 t} = e^{-(\lambda_1 + \lambda_2) t}$$
+The "×" works because the buses are independent — Bus A being late doesn't make Bus B come faster.
 
-So $Z \sim \text{Exponential}(\lambda_1 + \lambda_2)$.
+**Step 2:** We know the survival formula. For each bus:
 
-**The minimum of independent Exponentials is also Exponential, with rate equal to the sum of the rates.**
+```
+P(Bus A not here by t) = e^{-λ₁t}
+P(Bus B not here by t) = e^{-λ₂t}
+```
 
-This generalizes: $\min(X_1, X_2, ..., X_n) \sim \text{Exponential}(\lambda_1 + \lambda_2 + ... + \lambda_n)$.
+**Step 3:** Multiply them:
+
+```
+P(you're still waiting) = e^{-λ₁t} × e^{-λ₂t} = e^{-(λ₁ + λ₂)t}
+```
+
+Look at that result. It's the same Exponential survival function, just with **λ₁ + λ₂** as the rate.
+
+So here's the deal:
+
+> **If you have two independent Exponential clocks ticking, the first one to ring is also Exponential — and its rate is the sum of the two rates.**
+
+**Why this makes sense:** Two buses means double the chance of *something* arriving. If Bus A gives you 6 chances per hour and Bus B gives you 4 chances per hour, together you've got 10 chances per hour. Faster rate = shorter average wait = 1/(λ₁ + λ₂).
+
+**This works for any number of independent Exponentials.** If you're waiting for a bus, a train, and a taxi — all coming at their own rates — the time until the *first* one arrives is Exponential with rate equal to all their rates added together.
 
 ---
 
