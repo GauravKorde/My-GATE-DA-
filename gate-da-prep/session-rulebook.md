@@ -488,7 +488,16 @@ Instead of paragraphs comparing values, use a table. The eye processes tables fa
 
 ---
 
-## 18. Summary — The Enhanced Golden Rule
+## 18. The Incremental Learning Rule (Foundational Practice First)
+
+To prevent cognitive overload, we follow a strict small-step learning progression:
+*   **Theory First**: We study the theoretical concepts and mathematical derivations of the session first.
+*   **Immediate Foundational Practice**: Immediately after the theory of any study session is finished, we **must** run a dedicated foundational practice session covering all the basic formulas of that unit before moving to advanced applications.
+*   **No Skipping**: Never jump into complex, multi-concept problems (like competing risks or mixture models) until basic formula fluency is verified.
+
+---
+
+## 19. Summary — The Enhanced Golden Rule
 
 **If a step feels like "too much detail," include it.**
 **If a formula feels "obvious," derive it anyway.**
